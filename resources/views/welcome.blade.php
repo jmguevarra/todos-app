@@ -35,7 +35,7 @@
                     @endauth
                 </div>
             @endif
-            <h1>Homepage</h1>
+            <a href="/todos">Goto Todos App</a>
         </div>
     </body>
 </html>
