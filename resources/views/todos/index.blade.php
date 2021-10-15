@@ -16,7 +16,7 @@
         </div>
     </header>
 
-    <div class="main-header py-3">
+    <div class="todos-section py-3">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -29,7 +29,7 @@
                                 @foreach($todos as $todo)
                                     <div class="todo-list list-group-item d-flex justify-content-between">
                                         <div class="todo-name">{{ $todo->name }}</div>
-                                        <button class="btn btn-primary btn-sm">View</button>
+                                        <a href="todos/{{ $todo->id }}" class="btn btn-primary btn-sm">View</a>
                                     </div>
                                 @endforeach
                             </div>
