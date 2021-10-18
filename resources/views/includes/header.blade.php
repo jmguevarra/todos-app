@@ -7,6 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
             <a class="nav-item nav-link active" href="/todos">Tasks<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/new-todos">Create todos</a>
             </div>
         </div>
     </nav>
