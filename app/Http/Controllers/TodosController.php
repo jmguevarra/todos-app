@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Todo;
 
-class TodosController extends Controller
+class TodosController extends Controller //<-- extends Controller Class
 {
     public function index(){
 
@@ -22,7 +22,16 @@ class TodosController extends Controller
     }
 
     public function saveTodo(){
+        
+        $this->validate(request(), 
+            [
+                'name' => 'required|min:6|max:12', 
+                'description' => 'required'
+            ]
+        );
+
         $data = request()->all();
+        dd($data);
 
         $todo = new Todo();
         $todo->name = $data['name'];
