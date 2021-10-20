@@ -33,6 +33,7 @@
                     </div>
                 </div>
             </div>
+            <a href="/todos/{{ $todo->id }}/edit" class="btn btn-info  mt-2">Edit</a>
         </div>
     </div>
 </div>

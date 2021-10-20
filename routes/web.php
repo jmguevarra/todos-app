@@ -23,5 +23,7 @@ Route::get('todos', [TodosController::class, 'index']);
 Route::get('todos/{todo}', [TodosController::class, 'show']);
 
 Route::get('new-todos', [TodosController::class, 'create']);
-
 Route::post('save-todos', [TodosController::class, 'saveTodo']);
+
+Route::get('todos/{todo}/edit', [TodosController::class, 'editTodo']);
+Route::post('todos/{todo}/update-todos', [TodosController::class, 'updateTodo']);
