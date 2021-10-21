@@ -18,7 +18,12 @@
                         @foreach($todos as $todo)
                             <div class="todo-list list-group-item d-flex justify-content-between">
                                 <div class="todo-name">{{ $todo->name }}</div>
-                                <a href="todos/{{ $todo->id }}" class="btn btn-primary btn-sm">View</a>
+                                <div class="todos-actions">
+                                    <a href="todos/{{ $todo->id }}" class="btn btn-primary btn-sm">View</a>
+                                    @if( !$todo->completed )
+                                        <a href="todos/{{ $todo->id }}/complete" style="color:#fff;" class="btn btn-warning btn-sm ml-1">Complete</a>
+                                    @endif
+                                </div>
                             </div>
                         @endforeach
                     </div>
